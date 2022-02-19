@@ -10,12 +10,12 @@ function capitalA(s) {
     let pattern2 = /A$/g;
     let result1 = pattern1.test(s);
     let result2 = pattern2.test(s);
-    
+
 
     if ((result1 && result2) === true)
-    return true;
+        return true;
     else
-    return false;
+        return false;
 }
 
 
@@ -25,11 +25,11 @@ which end with io (example@example.io) */
 function ioEmail(email) {
     let pattern = /example@example.io/g;
     let result = pattern.test(email);
-    if(result === true){
+    if (result === true) {
         return true
     }
     else
-    return false;
+        return false;
 
 
 }
@@ -40,12 +40,13 @@ required extention are jpg, jpeg and png.
 */
 
 function imagesSearcher(text) {
-    let arr ;
-    let regex = /cat.png|dog.jpg|cow.jpeg/;
+    let arr;
+    let regex = /[^\s]+(\.(png|jpg|jpeg))/g;
     arr = text.match(regex);
-    
+    console.log(text.match(regex));
+
     // Add your logic.
-    return arr
+    return arr || [];
 }
 
 
