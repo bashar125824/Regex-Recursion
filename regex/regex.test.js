@@ -23,7 +23,7 @@ function capitalA(s) {
 which end with io (example@example.io) */
 
 function ioEmail(email) {
-    let pattern = /example@example.io/g;
+    let pattern = /ex+[^@.]+[a-z]+@\S+.io/g;
     let result = pattern.test(email);
     if (result === true) {
         return true
